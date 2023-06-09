@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <style>
+      body {
+        padding: 2vmin;
+        margin: 0 auto;
+        max-width: 80em;
+        background-color: #393939;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      pre {
+        background-color: black;
+        padding: 1rem;
+      }
+
+      figure {
+        background-image: url(https://images.unsplash.com/photo-1685535873935-c6841d3f5f9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1901&q=80);
+        background-size: cover;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
+
+      a {
+        color: rgb(116, 239, 169)
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Add device frames to screenshots</h1>
+    <p>A script using bash and imagemagick convert and mogrify tools.</p>
+    <p><a href="https://twitter.com/urre">Urban Sandén</a></p>
+
+    <img
+    src="screenshot-1.jpg"
+    alt="A screenshot"
+    width="1200"
+    height="600"
+    loading="lazy"
+  />
+
+
+  <h2>JPG, offset and white background color</h2>
+  <pre>
+    bash add-device-frames.sh jpg 1600 100
+
+  </pre>
+
+  <img
+  src="screenshot-1.png"
+  alt="A screenshot"
+  width="400"
+  height="600"
+  loading="lazy"
+  />
+  <h2>PNG, transparent</h2>
+  <pre>
+    bash add-device-frames.sh png 0 0
+  </pre>
+    <figure>
+      <img
+        src="screenshot-1.png"
+        alt="A screenshot"
+        width="400"
+        height="600"
+        loading="lazy"
+      />
+    </figure>
+    <h2>PNG, transparent and background image</h2>
+    <p>The screenshot inside a simple figure with a custom background image</p>
+  </body>
+</html>
