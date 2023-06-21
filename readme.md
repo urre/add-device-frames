@@ -1,15 +1,14 @@
 # Add device frames to mobile screenshots
 
+## Prerequisites
 
-
-## Install
-
-1. Install imagemagick
+1. You need imagemagick
 
 ```shell
 brew install imagemagick
 ```
-2. Download device images ex. from Apple:
+
+2. Download device images for example from Apple:
 
 ```shell
 curl https://devimages-cdn.apple.com/design/resources/download/Bezel-iPhone-14.dmg
@@ -23,7 +22,7 @@ Create a transparent PNG
 ```shell
 bash add-device-frames.sh png 0 0
 ```
-Create a JPG with offset and white background
+Create a JPG with 60 px x/y offset and white background
 
 ```shell
 bash add-device-frames.sh jpg 60 60
@@ -40,7 +39,7 @@ Arguments avaliable:
 
 ## Example
 
-Open the example.html file to se an example
+[View the example.html](example.html) file to se an example
 
 ```shell
 open example.html
