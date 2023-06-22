@@ -4,25 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example</title>
+    <title>Add device frames</title>
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"
+    />
+
     <style>
       body {
         padding: 2vmin;
         margin: 0 auto;
-        max-width: 80em;
+        max-width: 90em;
         background-color: #393939;
         color: white;
         font-family: sans-serif;
       }
 
       pre {
-        background-color: black;
-        padding: 1rem;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 12px;
+      }
+
+      @media (min-width: 40em) {
+        .container {
+          display: grid;
+          gap: 4rem;
+          grid-template-columns: repeat(2, 50%);
+          margin-bottom: 4rem;
+        }
       }
 
       figure {
-        background-image: url(https://images.unsplash.com/photo-1685535873935-c6841d3f5f9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1901&q=80);
-        background-size: cover;
+        background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+          linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+          linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+          linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+          linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+          linear-gradient(
+            #1d1d1d 25%,
+            #1a1a1a 25%,
+            #1a1a1a 50%,
+            transparent 50%,
+            transparent 75%,
+            #242424 75%,
+            #242424
+          );
+        background-color: #131313;
+        background-size: 20px 20px;
         aspect-ratio: 16 / 9;
         display: flex;
         justify-content: center;
@@ -36,56 +65,72 @@
         max-width: 100%;
         display: block;
         height: auto;
+        transition: all 800ms ease;
+      }
+
+      img[src$=".png"]:hover {
+        transform: perspective(10000px) rotateY(5deg) rotateX(15deg)
+          rotateZ(-5deg) scale(1) translate3d(0px, 0px, 40px);
       }
 
       a {
-        color: rgb(116, 239, 169)
+        color: rgb(116, 239, 169);
       }
-
     </style>
   </head>
   <body>
-
     <h1>Add device frames to screenshots</h1>
     <p>A script using bash and imagemagick convert and mogrify tools.</p>
     <p><a href="https://twitter.com/urre">Urban Sandén</a></p>
 
-    <img
-    src="screenshot-1.jpg"
-    alt="A screenshot"
-    width="1200"
-    height="600"
-    loading="lazy"
-  />
+    <p><a href="/">Read Docs</a> <a href="/example.html">View Example</a></p>
 
+    <div class="container">
+      <main>
+        <img
+          src="screenshot-1.jpg"
+          alt="A screenshot"
+          width="1200"
+          height="600"
+          loading="lazy"
+        />
+      </main>
+      <aside>
+        <h2>JPG, offset and white background color</h2>
+        <pre><code class="language-shell">
+        bash add-device-frames.sh jpg 1600 100
+    </code>
+      </pre>
+      </aside>
+    </div>
 
-  <h2>JPG, offset and white background color</h2>
-  <pre>
-    bash add-device-frames.sh jpg 1600 100
+    <div class="container">
+      <main>
+        <figure>
+          <img
+            src="screenshot-1.png"
+            alt="A screenshot"
+            width="400"
+            height="600"
+            loading="lazy"
+          />
+        </figure>
+      </main>
+      <aside>
+        <h2>PNG, transparent and background image</h2>
+        <p>
+          The screenshot inside a simple figure with a sample background image.
+        </p>
+        <pre><code class="language-shell">
+        bash add-device-frames.sh png 0 0
+  </code>
+    </pre>
+      </aside>
+    </div>
 
-  </pre>
-
-  <img
-  src="screenshot-1.png"
-  alt="A screenshot"
-  width="400"
-  height="600"
-  loading="lazy"
-  />
-  <h2>PNG, transparent</h2>
-  <pre>
-    bash add-device-frames.sh png 0 0
-  </pre>
-    <figure>
-      <img
-        src="screenshot-1.png"
-        alt="A screenshot"
-        width="400"
-        height="600"
-        loading="lazy"
-      />
-    </figure>
-    <h2>PNG, transparent and background image</h2>
-    <p>The screenshot inside a simple figure with a custom background image</p>
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

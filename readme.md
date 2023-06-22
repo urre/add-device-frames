@@ -17,6 +17,11 @@ curl https://devimages-cdn.apple.com/design/resources/download/Bezel-iPhone-14.d
 
 ## Usage
 
+Grab a screenshot with iOS Simulator and drag/copy the image to the same folder as the script.
+
+![Grab a screenshot with iOS Simulator](readme-example.jpg)
+
+
 Create a transparent PNG
 
 ```shell
@@ -50,6 +55,10 @@ open example.html
 JPG with an offset and white background.
 
 <img src="screenshot-1.jpg">
+
+Transparent PNG
+
+<img src="screenshot-1.png" style="max-width: 320px">
 
 ## Notes
 - The script will batch all screenshots in the current folder, adjust the filename glob in L33 to your needs and options L20-23.
