@@ -34,10 +34,10 @@ Create a transparent PNG
 ```shell
 bash add-device-frames.sh png 0 0
 ```
-Create a JPG with 1200/100 px x/y offset and white background
+Create a JPG with 1600/100 px x/y offset and a lightgrey background
 
 ```shell
-bash add-device-frames.sh jpg 1200 100 white
+bash add-device-frames.sh jpg 1600 100 lightgrey
 ```
 
 ## Options
@@ -60,7 +60,7 @@ open example.html
 
 ### Example image
 
-JPG with an offset and white background.
+JPG with an offset and a lightgrey background color.
 
 <img src="screenshot-1.jpg">
 
