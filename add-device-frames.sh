@@ -12,6 +12,7 @@
 #   $1: file type - jpg or png
 #   $2: offset width - ex 60
 #   $3: offset height - ex 60
+#   $4: background color - ex white
 #
 # Note:
 #   The script will batch all screenshots in the current folder, adjust the filename glob in L33 to your needs and options L20-23.
@@ -44,9 +45,9 @@ for file in *simulator*; do
 
 		# If offset given as an argument, add white background, and the offset in pixels on the sides
 		if [ "$2" != "0" ]; then
-			convert "screenshot-temp-$count".png -gravity center -extent $(identify -format "%[fx:w+$2]x%[fx:h+$3]" "screenshot-temp-$count".png) "screenshot-temp-$count".png
+			convert "screenshot-temp-$count".png -gravity center -background $4 -extent $(identify -format "%[fx:w+$2]x%[fx:h+$3]" "screenshot-temp-$count".png) "screenshot-temp-$count".png
 		else
-			convert "screenshot-temp-$count".png -gravity center -background white "screenshot-temp-$count".jpg
+			convert "screenshot-temp-$count".png -gravity center "screenshot-temp-$count".jpg
 		fi
 
 		# JPG or PNG?

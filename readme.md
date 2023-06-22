@@ -34,10 +34,10 @@ Create a transparent PNG
 ```shell
 bash add-device-frames.sh png 0 0
 ```
-Create a JPG with 60 px x/y offset and white background
+Create a JPG with 1200/100 px x/y offset and white background
 
 ```shell
-bash add-device-frames.sh jpg 60 60
+bash add-device-frames.sh jpg 1200 100 white
 ```
 
 ## Options
@@ -47,6 +47,7 @@ Arguments avaliable:
 - $1: file type - jpg or png
 - $2: offset width - ex 60
 - $3: offset height - ex 60
+- $4: background color - ex white
 
 
 ## Example
