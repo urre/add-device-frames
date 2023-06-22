@@ -50,7 +50,7 @@ Arguments avaliable:
 - $4: background color - ex white
 
 
-## DEmo
+## Demo
 
 [View the example.html](example.html) file to se an example
 
