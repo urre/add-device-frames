@@ -50,7 +50,7 @@ Arguments avaliable:
 - $4: background color - ex white
 
 
-## Example
+## DEmo
 
 [View the example.html](example.html) file to se an example
 
@@ -58,7 +58,7 @@ Arguments avaliable:
 open example.html
 ```
 
-### Example image
+### Example images
 
 JPG with an offset and a lightgrey background color.
 
